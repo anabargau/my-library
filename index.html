@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js" defer></script>
+  <title>My-Library</title>
+</head>
+<body>
+  <div class="modal" id="modal">
+    <form id="form">
+      <div class="form-header">
+        <legend>Add Book</legend>
+        <button class="close-btn" id="close-btn">X</button>
+      </div>
+      <label for="name">Name
+        <input type="text" name="name" minlength="1" id="name" minlength="2" required>
+      </label>
+      <label for="author">Author
+        <input type="text" name="author" id="author" minlength="2" required>
+      </label>
+      <label for="pages">Pages
+        <input type="number" name="pages" id="pages" pattern="^[1-9][0-9]*$" min="1" required>
+      </label>
+      <div class="read-switch">
+        <label for="switch">Read </label>
+          <div class="switch" id="switch">
+            <input type="checkbox" class="switch-box" name="read">
+            <span class="slider"></span>
+          </div>
+      </div>
+      <button id="submit-book" type="submit">+Add</button>
+    </form>
+  </div>
+  <div class="title-container">
+    <div class="title">My Library</div> 
+    <button id="add-book" type="submit">+ Add Book</button>
+  </div>
+  <div id="books-container">
+  </div>
+</body>
+</html>
